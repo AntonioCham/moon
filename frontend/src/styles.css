@@ -498,9 +498,12 @@ input {
 
 .search-input-wrap {
   position: relative;
+  min-height: 52px;
 }
 
 .search-input-wrap input {
+  height: 52px;
+  line-height: 52px;
   padding-right: 68px;
 }
 
@@ -510,8 +513,16 @@ input {
   top: 50%;
   transform: translateY(-50%);
   border-radius: 999px;
+  width: 52px;
+  height: 40px;
   min-width: 52px;
-  padding: 10px 12px;
+  min-height: 40px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: none;
+  will-change: auto;
 }
 
 .search-icon-btn:hover,
@@ -521,6 +532,7 @@ input {
   transform: translateY(-50%);
   outline: none;
   box-shadow: none;
+  transition: none;
 }
 
 .tweet-card {
