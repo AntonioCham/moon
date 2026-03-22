@@ -214,7 +214,6 @@ input {
 }
 
 .mobile-app-shell {
-  width: 100%;
   display: grid;
   place-items: center;
 }
@@ -277,8 +276,6 @@ input {
   display: grid;
   grid-template-rows: auto 1fr;
   min-height: 0;
-  min-width: 0;
-  overflow: hidden;
 }
 
 .app-page {
@@ -286,8 +283,6 @@ input {
   gap: 0;
   align-content: start;
   min-height: 0;
-  min-width: 0;
-  width: 100%;
 }
 
 .screen-flash {
@@ -410,9 +405,6 @@ input {
   display: grid;
   align-content: start;
   min-height: 0;
-  min-width: 0;
-  width: 100%;
-  overflow: hidden;
 }
 
 .browser-google {
@@ -446,8 +438,6 @@ input {
   background: white;
   border-radius: 24px;
   box-shadow: 0 10px 24px rgba(31, 41, 55, 0.12);
-  min-width: 0;
-  overflow: hidden;
 }
 
 .google-result-card h3 {
@@ -467,7 +457,6 @@ input {
   height: 100%;
   overflow: auto;
   padding-right: 4px;
-  min-width: 0;
 }
 
 .results-scroll-google,
@@ -510,7 +499,6 @@ input {
 .search-input-wrap {
   position: relative;
   min-height: 52px;
-  width: 100%;
 }
 
 .search-input-wrap input {
@@ -556,8 +544,6 @@ input {
   border-radius: 24px;
   box-shadow: 0 10px 22px rgba(31, 41, 55, 0.12);
   border: 1px solid rgba(29, 161, 242, 0.18);
-  min-width: 0;
-  overflow: hidden;
 }
 
 .tweet-head-a14 {
@@ -594,8 +580,6 @@ input {
   border-radius: 18px;
   background: rgba(29, 161, 242, 0.1);
   border: 1px solid rgba(29, 161, 242, 0.18);
-  min-width: 0;
-  overflow: hidden;
 }
 
 .tweet-reply-box p {
@@ -826,8 +810,6 @@ input {
   border-radius: 28px;
   background: rgba(255, 255, 255, 0.34);
   backdrop-filter: blur(14px);
-  min-width: 0;
-  overflow: hidden;
 }
 
 .login-title {
@@ -857,14 +839,25 @@ input {
   display: grid;
   gap: 18px;
   align-content: start;
-  min-width: 0;
-  overflow: hidden;
 }
 
 .login-enter-btn,
 .search-icon-btn,
 .message-send-btn {
   flex-shrink: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  line-height: 1;
+  transition: none !important;
+  will-change: auto;
+}
+
+.login-enter-btn span,
+.search-icon-btn span,
+.message-send-btn span {
+  display: block;
+  line-height: 1;
+  pointer-events: none;
 }
 
 .login-enter-btn:hover,
