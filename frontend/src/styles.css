@@ -214,6 +214,7 @@ input {
 }
 
 .mobile-app-shell {
+  width: 100%;
   display: grid;
   place-items: center;
 }
@@ -276,6 +277,8 @@ input {
   display: grid;
   grid-template-rows: auto 1fr;
   min-height: 0;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .app-page {
@@ -283,6 +286,8 @@ input {
   gap: 0;
   align-content: start;
   min-height: 0;
+  min-width: 0;
+  width: 100%;
 }
 
 .screen-flash {
@@ -405,6 +410,9 @@ input {
   display: grid;
   align-content: start;
   min-height: 0;
+  min-width: 0;
+  width: 100%;
+  overflow: hidden;
 }
 
 .browser-google {
@@ -438,6 +446,8 @@ input {
   background: white;
   border-radius: 24px;
   box-shadow: 0 10px 24px rgba(31, 41, 55, 0.12);
+  min-width: 0;
+  overflow: hidden;
 }
 
 .google-result-card h3 {
@@ -457,6 +467,7 @@ input {
   height: 100%;
   overflow: auto;
   padding-right: 4px;
+  min-width: 0;
 }
 
 .results-scroll-google,
@@ -499,6 +510,7 @@ input {
 .search-input-wrap {
   position: relative;
   min-height: 52px;
+  width: 100%;
 }
 
 .search-input-wrap input {
@@ -544,6 +556,8 @@ input {
   border-radius: 24px;
   box-shadow: 0 10px 22px rgba(31, 41, 55, 0.12);
   border: 1px solid rgba(29, 161, 242, 0.18);
+  min-width: 0;
+  overflow: hidden;
 }
 
 .tweet-head-a14 {
@@ -580,6 +594,8 @@ input {
   border-radius: 18px;
   background: rgba(29, 161, 242, 0.1);
   border: 1px solid rgba(29, 161, 242, 0.18);
+  min-width: 0;
+  overflow: hidden;
 }
 
 .tweet-reply-box p {
@@ -738,6 +754,7 @@ input {
   align-items: center;
   justify-content: center;
   font-size: 1rem;
+  transition: none;
 }
 
 .center-muted {
@@ -809,6 +826,8 @@ input {
   border-radius: 28px;
   background: rgba(255, 255, 255, 0.34);
   backdrop-filter: blur(14px);
+  min-width: 0;
+  overflow: hidden;
 }
 
 .login-title {
@@ -838,6 +857,47 @@ input {
   display: grid;
   gap: 18px;
   align-content: start;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.login-enter-btn,
+.search-icon-btn,
+.message-send-btn {
+  flex-shrink: 0;
+}
+
+.login-enter-btn:hover,
+.login-enter-btn:focus,
+.login-enter-btn:focus-visible,
+.login-enter-btn:active,
+.search-icon-btn:hover,
+.search-icon-btn:focus,
+.search-icon-btn:focus-visible,
+.search-icon-btn:active,
+.message-send-btn:hover,
+.message-send-btn:focus,
+.message-send-btn:focus-visible,
+.message-send-btn:active {
+  box-shadow: none;
+}
+
+.search-icon-btn:hover,
+.search-icon-btn:focus,
+.search-icon-btn:focus-visible,
+.search-icon-btn:active,
+.message-send-btn:hover,
+.message-send-btn:focus,
+.message-send-btn:focus-visible,
+.message-send-btn:active {
+  transform: translateY(-50%);
+}
+
+.login-enter-btn:hover,
+.login-enter-btn:focus,
+.login-enter-btn:focus-visible,
+.login-enter-btn:active {
+  transform: none;
 }
 
 .admin-phone-head {
