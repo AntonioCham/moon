@@ -27,4 +27,4 @@ COPY README.md /app/README.md
 EXPOSE 8888
 
 WORKDIR /app/backend
-CMD ["python", "-m", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8888"]
+CMD ["sh", "-c", "python -m uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8888}"]
